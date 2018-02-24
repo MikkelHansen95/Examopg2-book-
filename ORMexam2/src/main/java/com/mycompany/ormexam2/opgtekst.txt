@@ -1,0 +1,21 @@
+*)
+Håndteret insert manuelt og præget af native sql.
+
+
+
+*)
+I JPA laver vi notationer for at hjælpe JPA for at lave DB her er notationerne strengt nødvendige for at DB laves korrekt,
+Der bruges notationer som, @entity, @OneToMany, @OneToOne, osv for at vise databasen relationerne mellem entititer, da vi
+ikke har Objekter i databasen som vi har i java.
+
+
+*) 
+OO bliver mapped ved hjælp af notationer som gør at DB laves ud fra entititen i sådan en forstand at det ligner vores objekt,
+med underklasser eller andre tabeller som har relation til vores egentlige objekt.
+
+*)
+Der findes single table mapping som laver en tabel med alle værdier for inheritence så når objektet kun er den ene af de to instancer,
+så bliver de resterende værdier bare null.
+
+En anden strategi er joined tabeller som laver en tabel for den overordnede superklasse og her har den en type som hver har sin tabel,
+hvori de resterende data står, og her er id'et fra superklassen det bindende led som går igen i de "mindre" tabeller"
